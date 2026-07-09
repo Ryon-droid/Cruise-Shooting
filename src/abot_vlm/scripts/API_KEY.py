@@ -1,0 +1,1 @@
+YI_KEY = "YOUR_YI_API_KEY"

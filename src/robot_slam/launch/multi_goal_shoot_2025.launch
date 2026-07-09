@@ -1,0 +1,10 @@
+<launch>
+  <node name="multi_goal" pkg="robot_slam" type="shoot_2025_new.py" output="screen">
+      <param name="goalListX" value="   1.06,   1.08,  1.19,  0.20"/>
+      <param name="goalListY" value="  -0.44,  -1.79, -3.00, -3.02"/>
+      <param name="goalListYaw" value=" 0.00,   0.00,  0.00,  0.00"/>
+      <param name="transX" value=" 0.12, 0.15, 0.20, 0.20 " />
+      <param name="transY" value="-0.42,-1.70,-1.62,-2.85" />
+      <param name="transYaw" value="0, 0  ,0,   0" />
+  </node>
+</launch>

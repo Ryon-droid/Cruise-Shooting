@@ -1,0 +1,31 @@
+﻿# Catkin / ROS build outputs
+build/
+devel/
+install/
+logs/
+.catkin_tools/
+
+# Runtime / temporary files
+tmp/
+*.bag
+*.db3
+*.log
+*.pyc
+__pycache__/
+*.swp
+*.swo
+
+# IDE / OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local secrets, keep real API keys out of git
+.env
+.env.*
+*.local
+secrets.*
+
+# Large local model weights (download/copy manually on the robot)
+src/robot_slam/scripts/paraformer-zh/model.pt
