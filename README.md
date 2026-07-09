@@ -118,7 +118,7 @@ shall/2026_shoot.sh
 
 ## API 密钥替换
 
-本工程中部分语音、TTS 和视觉大模型模块需要外部平台 API 密钥。为了保持完赛代码的运行方式，上传版保留原代码中的“直接在文件里配置变量”的写法，只把真实密钥替换为 `YOUR_...` 占位符。下载到车载端后，按原位置把占位符替换成自己的平台密钥即可。
+本工程中部分语音、TTS 和视觉大模型模块需要外部平台 API 密钥，仓库里的真实密钥被替换为 `YOUR_...` 占位符。下载到车载端后，按原位置把占位符替换成自己的平台密钥即可。
 
 先用下面命令检查密钥位置：
 
@@ -165,12 +165,11 @@ const char* login_params = "appid = YOUR_XFYUN_APPID, work_dir = .";
 修改 `src/robot_voice/src/*.cpp` 中的 `login_params` 后，需要重新编译：
 
 ```bash
-cd ~/8C8PE4
 catkin_make
 source devel/setup.bash
 ```
 
-注意：`src/abot_vlm/scripts/doubao_openAI.py` 原本就是通过 `ARK_API_KEY` 环境变量读取豆包/火山方舟密钥，该文件保持原写法。如果使用这个脚本，运行前设置：
+注意：`src/abot_vlm/scripts/doubao_openAI.py` 是通过 `ARK_API_KEY` 环境变量读取豆包/火山方舟密钥，该文件保持原写法。如果使用这个脚本，运行前设置：
 
 ```bash
 export ARK_API_KEY="YOUR_ARK_API_KEY"
@@ -194,7 +193,6 @@ src/robot_slam/scripts/demo.py
 ## 编译
 
 ```bash
-cd ~/8C8PE4
 source /opt/ros/melodic/setup.bash
 catkin_make
 source devel/setup.bash
@@ -253,41 +251,34 @@ roscore
 ```
 
 ```bash
-source ~/8C8PE4/devel/setup.bash
 roslaunch abot_bringup robot_with_imu.launch
 ```
 
 ```bash
-source ~/8C8PE4/devel/setup.bash
 roslaunch robot_slam navigation_shoot.launch
 roslaunch robot_slam view_nav.launch
 ```
 
 ```bash
-source ~/8C8PE4/devel/setup.bash
 roslaunch track_tag usb_cam_with_calibration.launch
 roslaunch track_tag ar_track_camera.launch
 ```
 
 ```bash
-source ~/8C8PE4/devel/setup.bash
 roslaunch find_object_2d find_object_2d_shoot.launch
 ```
 
 ```bash
-source ~/8C8PE4/devel/setup.bash
 rosrun TTS_audio TTS.py
 rosrun robot_slam 2026_shoot_target.py
 ```
 
 ```bash
-source ~/8C8PE4/devel/setup.bash
-cd ~/8C8PE4/src/robot_slam/scripts
+cd /src/robot_slam/scripts
 /home/abot/anaconda3/envs/py39/bin/python 2026_shoot_demo.py
 ```
 
 ```bash
-source ~/8C8PE4/devel/setup.bash
 roslaunch robot_slam multi_goal_shoot_2025.launch
 ```
 
