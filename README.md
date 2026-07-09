@@ -1,4 +1,8 @@
-# CRAIC2026 巡航射击小车工程
+# 自主巡航 — 巡航射击场景
+
+[![release](https://img.shields.io/badge/release-v1.0.1-1f8dd6?style=flat-square)](https://github.com/Ryon-droid/Cruise-Shooting/releases/tag/v1.0.1)
+![ROS](https://img.shields.io/badge/ROS-Melodic-63b914?style=flat-square)
+![Python](https://img.shields.io/badge/Python-2.7%20%7C%203.9-f1d000?style=flat-square)
 
 本工程是面向 CRAIC2026 机器人任务挑战赛“目标射击场景”的 ROS Melodic/catkin 工作空间，核心目标是在 3.6m x 3.6m 场地内完成自主导航、语音任务识别、视觉/AR 靶标识别、自动瞄准射击和终点返回。
 
